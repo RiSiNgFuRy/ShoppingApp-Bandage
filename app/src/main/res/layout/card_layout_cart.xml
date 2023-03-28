@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="10dp"
+    android:elevation="10dp"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cartCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/cartItemImg"
+            android:layout_width="65dp"
+            android:layout_height="110dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginLeft="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cartItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintStart_toEndOf="@id/cartItemImg"
+            app:layout_constraintTop_toTopOf="@id/cartItemImg"/>
+
+        <TextView
+            android:id="@+id/cartItemType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintStart_toEndOf="@id/cartItemImg"
+            app:layout_constraintTop_toBottomOf="@id/cartItemName"/>
+
+        <TextView
+            android:id="@+id/cartItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintStart_toEndOf="@id/cartItemImg"
+            app:layout_constraintTop_toBottomOf="@id/cartItemType"/>
+
+        <TextView
+            android:id="@+id/qtyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="Qty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cartItemImg"
+            app:layout_constraintTop_toBottomOf="@id/cartItemPrice" />
+
+        <Spinner
+            android:id="@+id/cartQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/qtyTxt"
+            app:layout_constraintTop_toBottomOf="@id/cartItemPrice" />
+
+        <TextView
+            android:id="@+id/cartDeleteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/delete_btn_bg"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="15dp"
+            android:layout_marginHorizontal="45dp"
+            android:text="Delete"
+            android:foreground = "?android:attr/selectableItemBackground"
+            android:textColor="@color/blueBtnColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cartQty"
+            app:layout_constraintTop_toBottomOf="@id/cartItemPrice" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

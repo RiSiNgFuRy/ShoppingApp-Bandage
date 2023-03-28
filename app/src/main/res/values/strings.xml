@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Shopping-App_ Bandage</string>
+    <string name="goToCart">Go To Cart</string>
+    <string name="addToCart">Add</string>
+    <string name="deletedItemList">itemsDeleted</string>
+    <string name="productId">productId</string>
+    <string name="preference_file_key">key</string>
+    <string name="empty_cart">Your Cart is Empty</string>
+    <string name="lessThan">&lt;</string>
+    <string name="greaterThan">&gt;</string>
+    <string name="positiveStatus">Success</string>
+    <string name="isOrderPlaced">orderPlaced</string>
+    <string name="deletingTxt">Deleting</string>
+    <string-array name="qtyOfItems">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

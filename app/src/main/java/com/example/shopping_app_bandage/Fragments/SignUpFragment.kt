@@ -45,7 +45,7 @@ class SignUpFragment : Fragment() {
             else if(!Patterns.EMAIL_ADDRESS.matcher(registerEmail.text).matches()){
                 registerEmail.error = "Invalid Email"
             }
-            else if(cnfRegisterPassword.text.equals(registerPassword.text)){
+            else if(cnfRegisterPassword.text == registerPassword.text){
                 registerPassword.text.clear()
                 cnfRegisterPassword.text.clear()
                 Toast.makeText(context, "Password doesn't match", Toast.LENGTH_SHORT)

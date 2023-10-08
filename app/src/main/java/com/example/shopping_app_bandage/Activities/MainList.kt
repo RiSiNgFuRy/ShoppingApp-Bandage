@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -122,6 +123,7 @@ class ProductAdapter(val context: Context, val prodList: ArrayList<ProductModel>
         holder.itemType.text = listModel.brand
         holder.itemOrignalPrice.text = "$ "+listModel.costPrice.toString()
         holder.itemPrice.text = "$ "+listModel.sellingPrice.toString()
+        holder.itemPrice.visibility = View.GONE
         Glide.with(context).load(listModel.imageUrl?.get(0)).placeholder(R.drawable.ic_launcher_foreground).fitCenter().into(holder.itemImg)
 
         if(Cart.findElementInCart(listModel))
@@ -135,12 +137,12 @@ class ProductAdapter(val context: Context, val prodList: ArrayList<ProductModel>
             activityResultLauncher.launch(i)
         }
 
-//        holder.itemColorPallet.apply {
-//            val n = Random.nextInt(0,4)
-//            for(i in 0..n)
-//                addView(makeColoredCircle(Random.nextInt(1,255),Random.nextInt(1,255),Random.nextInt(1,255)))
-//        }
-//
+        holder.itemColorPallet.apply {
+            val n = Random.nextInt(0,4)
+            for(i in 0..n)
+                addView(makeColoredCircle(Random.nextInt(1,255),Random.nextInt(1,255),Random.nextInt(1,255)))
+        }
+
     }
 
     fun makeColoredCircle(r: Int, g: Int, b: Int): ImageView{
